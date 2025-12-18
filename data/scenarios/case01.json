@@ -1,0 +1,146 @@
+{
+  "id": "case01",
+  "title": "午夜图书馆之谜",
+  "truth": {
+    "victim": {
+      "name": "李教授 (Professor Li)",
+      "timeOfDeath": "22:00 - 23:00",
+      "location": "私人书房",
+      "causeOfDeath": "头部遭到重物（青铜雕像）重击致死"
+    },
+    "murdererId": "char_A",
+    "motive": "学术嫉妒以及剽窃研究成果",
+    "realSequenceOfEvents": "22:15，张伟 (Char A) 进入书房质问李教授关于剽窃定理的事情。两人发生争吵。李教授转身后，张伟抓起青铜半身像袭击了他。张伟擦掉了指纹，并于 22:30 从窗户离开。",
+    "timeline": [
+      {
+        "time": "21:30",
+        "description": "保姆王阿姨 (Char C) 给李教授送茶。确认当时他还活着。",
+        "witnesses": [
+          "char_C"
+        ]
+      },
+      {
+        "time": "22:00",
+        "description": "学生林悦 (Char B) 赴约到达，听到争吵声，因为害怕没有进去就离开了。",
+        "witnesses": [
+          "char_B"
+        ]
+      },
+      {
+        "time": "22:15",
+        "description": "张伟 (Char A) 从花园门偷偷潜入。",
+        "witnesses": []
+      },
+      {
+        "time": "22:30",
+        "description": "张伟从窗户逃离。",
+        "witnesses": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev_01",
+        "name": "青铜半身像",
+        "description": "沉重的雕像，带有血迹，指纹已被擦除。",
+        "location": "书桌地板附近",
+        "found": true
+      },
+      {
+        "id": "ev_02",
+        "name": "烧毁的纸张",
+        "description": "壁炉里残留的研究论文碎片。",
+        "location": "壁炉",
+        "found": false
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "char_A",
+      "name": "张伟 (Zhang Wei)",
+      "role": "suspect",
+      "isMurderer": true,
+      "personality": "傲慢，防御心强，聪明，好胜。",
+      "relationToVictim": "竞争对手同事",
+      "alibi": "我整晚都在大学图书馆写我的宣言。",
+      "pressure": 0,
+      "patience": 100,
+      "isBreaking": false,
+      "knownFacts": [
+        {
+          "id": "f_A1",
+          "content": "李教授偷了我的研究成果。",
+          "isSecret": true
+        },
+        {
+          "id": "f_A2",
+          "content": "我有花园门的钥匙。",
+          "isSecret": true
+        },
+        {
+          "id": "f_A3",
+          "content": "我上周拜访过李教授。",
+          "isSecret": false
+        }
+      ]
+    },
+    {
+      "id": "char_B",
+      "name": "林悦 (Lin Yue)",
+      "role": "suspect",
+      "isMurderer": false,
+      "personality": "神经质，说话结巴，隐瞒了一些琐事。",
+      "relationToVictim": "研究生",
+      "alibi": "我去见他了，但是……我害怕就走了。我没进去。",
+      "pressure": 0,
+      "patience": 80,
+      "isBreaking": false,
+      "knownFacts": [
+        {
+          "id": "f_B1",
+          "content": "我在22:00听到了争吵声。",
+          "isSecret": false
+        },
+        {
+          "id": "f_B2",
+          "content": "我的课要挂科了。",
+          "isSecret": true
+        },
+        {
+          "id": "f_B3",
+          "content": "我看到窗户附近有脚印。",
+          "isSecret": false
+        }
+      ]
+    },
+    {
+      "id": "char_C",
+      "name": "王阿姨 (Auntie Wang)",
+      "role": "witness",
+      "isMurderer": false,
+      "personality": "忠诚，善于观察，单纯，诚实。",
+      "relationToVictim": "保姆",
+      "alibi": "我在厨房准备第二天的东西。",
+      "pressure": 0,
+      "patience": 90,
+      "isBreaking": false,
+      "knownFacts": [
+        {
+          "id": "f_C1",
+          "content": "我9:30送过茶。他当时很好。",
+          "isSecret": false
+        },
+        {
+          "id": "f_C2",
+          "content": "张伟先生脾气不好。",
+          "isSecret": false
+        },
+        {
+          "id": "f_C3",
+          "content": "我看到林悦哭着跑开了。",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
